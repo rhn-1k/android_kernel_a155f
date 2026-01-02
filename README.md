@@ -2,6 +2,16 @@
 
 ## 1. How to Build
 
+### Option A: Build via GitHub Actions
+1. Fork this repository to your own GitHub account.
+2. Navigate to the Actions tab in your forked repository.
+3. Select the build workflow from the left sidebar.
+4. Click Run workflow.
+5. Once the process completes, you can download the compiled kernel and boot image from the Artifacts section of the finished run.
+
+---
+
+### Option B: Manual Build
 ### Get Toolchain
 Get the proper toolchain packages from AOSP, CodeSourcery, or other sources.
 [Download link](https://opensource.samsung.com/uploadSearch?searchValue=toolchain)
@@ -98,15 +108,23 @@ export BUILD_CONFIG="../out/target/product/a15/obj/KERNEL_OBJ/build.config"
 
 This project includes code from the https://github.com/ReeViiS69/sm155f/ project, licensed under the GPL-2.0. Also, a huge thanks to ReeViiS69 for helping me build the kernel.
 
+This project includes code from the https://github.com/WildPlusKernel/GKI_KernelSU_SUSFS/ project, licensed under the GPL-2.0.
+
+This project includes code from the https://github.com/WildPlusKernel/kernel_patches/ project, licensed under the GPL-2.0.
+
+This project includes code from the https://gitlab.com/simonpunk/susfs4ksu/ project, licensed under the GPL-2.0.
+
 This project includes code from the https://github.com/fei-ke/android_kernel_samsung_sm8550/ project, licensed under the GPL-2.0.
 
 This project includes executable file/s from https://github.com/topjohnwu/Magisk/ project, licensed under the GPL-3.0.
 
 This project includes executable file/s from https://github.com/tiann/KernelSU/ project, licensed under the GPL-3.0.
 
-This project include file/s from https://android.googlesource.com/platform/external/avb project, licensed under the Apache License, Version 2.0.
+This project includes file/s from https://android.googlesource.com/platform/external/avb project, licensed under the Apache License, Version 2.0.
 
-**Donate**
+This project includes patch from https://github.com/fatalcoder524.
+
+**Donate to the original developer (poqdavid):**
 <br/>**BTC Legacy:** 1Q2JQG3iCLZPT2iJfDLow1oQVGKmxheoAh
 <br/>**BTC Segwit:** bc1q8gurls0wjkfe43ygmrqmu2pzmyjetnrvgws9sr
 <br/>**BCH:** qrks52smlqw7d8700d77uqvmve03d4knzvd2vghaqz
