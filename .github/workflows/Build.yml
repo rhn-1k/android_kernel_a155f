@@ -95,18 +95,11 @@ jobs:
           fi
           echo "final_tar_name=$FINAL_TAR" >> $GITHUB_OUTPUT
 
-      - name: Upload Final Files to Gofile
-        run: |
-          TAR_PATH="${{ steps.build_chain.outputs.final_tar_name }}"
-          
-          if [ -f "kernel_modules.zip" ]; then
-            RESP_MODS=$(curl -s -F "file=@kernel_modules.zip" -H "Authorization: Bearer E29ro0ueg1dXX7CHmJSdrO9puOTUMREk" https://upload.gofile.io/uploadFile)
-            LINK_MODS=$(echo $RESP_MODS | grep -o '"downloadPage": *"[^"]*"' | cut -d '"' -f 4)
-            echo "Modules Link: $LINK_MODS"
-          fi
-
-          RESP_KERN=$(curl -s -F "file=@${TAR_PATH}" -H "Authorization: Bearer E29ro0ueg1dXX7CHmJSdrO9puOTUMREk" https://upload.gofile.io/uploadFile)
-          LINK_KERN=$(echo $RESP_KERN | grep -o '"downloadPage": *"[^"]*"' | cut -d '"' -f 4)
-          
-          echo "Files uploaded successfully!"
-          echo "Kernel Link: $LINK_KERN"
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kernel-A155F
+          path: |
+            ${{ steps.build_chain.outputs.final_tar_name }}
+            kernel_modules.zip
+          if-no-files-found: warn
