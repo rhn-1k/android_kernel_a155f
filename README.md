@@ -8,7 +8,7 @@
 3. Select the build workflow from the left sidebar.
 4. Click Run workflow.
 5. Enter toolchain url or keep default one (thanks ravindu644 hehe)
-6. Once the process completes, you can download the compiled kernel and boot image from the Artifacts section of the finished run.
+6. Once the process completes, you can download the compiled kernel and boot image from the Artifacts section of the finished run. <br>
 `Note: the default values does not require to clean before building, you may need to enable it if you did changes`
 
 ---
