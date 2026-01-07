@@ -6,7 +6,7 @@ on:
       TOOLCHAIN_URL:
         description: 'URL of the toolchain .tar.gz file'
         required: true
-        default: 'https://github.com/ravindu644/android_kernel_a165f/releases/download/toolchain/toolchain.tar.gz'
+        default: 'https://github.com/rhn-1k/a15_mirror/releases/download/mirror/toolchain.tar.gz'
         type: string
       CLEAN_BUILD:
         description: 'Clean before building?'
